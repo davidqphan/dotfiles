@@ -1,0 +1,14 @@
+brightness controls
+apt install xbacklight
+cp ./20-intel.conf  /usr/share/X11/xorg.conf.d/
+
+touchpad
+apt install xserver-xorg-input-libinput
+cp ./60-libinput.conf  /usr/share/X11/xorg.conf.d/
+
+rofi themes
+cp ./Xresources ~/.Xresources
+
+external monitor script
+mkdir -p ~/utils/
+cp ./ext-display.sh ~/utills/ext-display.sh

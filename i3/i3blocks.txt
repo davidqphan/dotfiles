@@ -1,0 +1,22 @@
+[volume]
+label=
+interval=1
+
+# add to bottom of volume block
+command=/usr/share/i3blocks/volume 5 pulse
+
+[disk]
+label=
+
+[load]
+interval=1
+label=
+
+[wifi]
+label=
+
+[date]
+label=
+
+[memory]
+label=
