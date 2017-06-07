@@ -99,10 +99,10 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+z focus child
 
 set $workspace1 "1  "
-set $workspace2 "2  "
+set $workspace2 "2 "
 set $workspace3 "3  " 
 set $workspace4 "4"  
 set $workspace5 "5"
@@ -139,15 +139,13 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 set $monitor_extern HDMI1
 set $monitor_laptop eDP1
 
-# assigns a workspace to a certain display
 workspace $workspace1 output $monitor_extern
 workspace $workspace2 output $monitor_extern
 
 workspace $workspace3 output $monitor_laptop
 
-# moves a workspace to a certain display 
-bindsym $mod+n move workspace to output left
-bindsym $mod+m move workspace to output right
+#bindsym $mod+n move workspace to output left
+#bindsym $mod+m move workspace to output right
 
 # Assign specific applications to specific workspaces
 # xprop CLASS(STRING) first value is what you need for i3 config instance
@@ -219,7 +217,8 @@ hide_edge_borders both
 # finds out, if available)
 bar {
         # status_command i3status
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        font pango:System San Francisco Display, FontAwesome 12
+	status_command i3blocks -c ~/.config/i3/i3blocks.conf
         position top
         colors {
         background $bg-color
@@ -260,7 +259,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Screenshots
-bindsym --release Control+Shift+Print exec gnome-screenshot -a -c
+bindsym --release $mod+c exec gnome-screenshot -a -c
 bindsym --release Control+Print exec gnome-screenshot -w -c
 bindsym --release Print exec gnome-screenshot -c
 
@@ -297,8 +296,11 @@ exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal'
 exec --no-startup-id i3-msg 'workspace $workspace2; exec chromium-browser'
 
 #exec --no-startup-id i3-msg 'workspace $workspace3; append_layout ~/.config/i3/workspace-3.json'
-exec --no-startup-id i3-msg 'workspace $workspace3; layout tabbed; exec slack'
-exec --no-startup-id i3-msg 'workspace $workspace3; layout tabbed; exec messengerfordesktop'
+#exec --no-startup-id i3-msg 'workspace $workspace3; layout tabbed; exec slack'
+#exec --no-startup-id i3-msg 'workspace $workspace3; layout tabbed; exec messengerfordesktop'
+
+exec --no-startup-id i3-msg 'workspace $workspace3; exec slack'
+exec --no-startup-id i3-msg 'workspace $workspace3; exec messengerfordesktop'
 
 # Enable transparencies
 exec compton --config ~/.config/compton.conf -b
