@@ -46,12 +46,12 @@ sudo apt install lxappearance
 echo "Don't forget to run lxappearance to configure fonts, icons, and theme!"
 
 # Install Infinality for alternative font rendering
-# sudo add-apt-repository ppa:no1wantdthisname/ppa
-# sudo apt update
-# sudo apt upgrade -y
-# sudo apt install fontconfig-infinality
-# sudo bash /etc/fonts/infinality/infctl.sh setstyle
-# echo "edit /etc/profile.d/infinality-settings.sh and USE_STYLE="UBUNTU""
+ sudo add-apt-repository ppa:no1wantdthisname/ppa
+ sudo apt update
+ sudo apt upgrade -y
+ sudo apt install fontconfig-infinality
+ sudo bash /etc/fonts/infinality/infctl.sh setstyle
+ echo "edit /etc/profile.d/infinality-settings.sh and USE_STYLE="UBUNTU""
 
 # Install rofi
 echo "Installing rofi..."
