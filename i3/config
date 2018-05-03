@@ -42,6 +42,8 @@ bindsym $mod+Shift+q kill
 
 #bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -fullscreen -padding -opacity "75" -bw 0 -font "System San Francisco Display 22"
 
+bindsym $mod+grave exec rofi -show run -lines 3 -eh 2 -width 100 -padding 480 -opacity "85" -bw 0 -font "Roboto 20"
+
 bindsym $mod+d exec rofi -show drun -modi drun -width 100 -monitor -2 -fg "#B0E670" -bg "#14161F" -hlfg "#14161F" -hlbg "#B0E670" -bc "#14161F" -location 0 -lines 10 -bw 0 -font "System San Francisco Display 26" -padding 400 -separator-style none -opacity 86
 
 #bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 400 -opacity "85" -color-enabled -bw 0 -fullscreen -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 18"
@@ -280,7 +282,7 @@ exec gnome-settings-daemon
 exec caffeine-indicator
 
 # Change wallpaper
-exec_always feh --bg-scale /home/dphan/Pictures/wallpaper.jpg
+exec_always feh --bg-scale /home/dphan/Pictures/Wallpapers/wallpaper.jpg
 
 # exec --no-startup-id i3-msg 'workspace $workspace1; exec i3-sensible-terminal'
 # exec --no-startup-id i3-msg 'workspace $workspace2; exec google-chrome'
